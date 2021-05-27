@@ -10,8 +10,8 @@ Library           RPA.Cloud.Azure
 ...               region=eastus
 ...               robocloud_vault_name=azure
 Library           RPA.Cloud.Google
-...               robocloud_vault_name=gcp
-...               robocloud_vault_secret_key=json_content
+...               vault_name=gcp
+...               vault_secret_key=json_content
 
 *** Variables ***
 ${INVOICE_URL}=    https://templates.invoicehome.com/invoice-template-us-neat-750px.png
@@ -51,7 +51,7 @@ Analyze text sample with Azure
 
 *** Tasks ***
 Analyze image with Google Vision AI
-    Init Vision Client    use_robocloud_vault=True
+    Init Vision    use_robocorp_vault=True
     ${labels}=    Detect Labels    ${PICTURE_FILE}    ${CURDIR}${/}output${/}vision_labels.json
     ${text}=    Detect Text    ${PICTURE_FILE}    ${CURDIR}${/}output${/}vision_text.json
     Log    ${CURDIR}
