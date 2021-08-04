@@ -16,14 +16,16 @@ Library           RPA.Cloud.Google
 *** Variables ***
 ${INVOICE_FILE}=    ${CURDIR}${/}sample_files${/}invoice.png
 ${PICTURE_FILE}=    ${CURDIR}${/}sample_files${/}picture.jpg
-${TEXT_SAMPLE}=    A software robot developer creates digital agents for robotic process
-...               automation (RPA), test automation, application monitoring, or some
-...               other use. Tens of thousands of new jobs are predicted to be created
-...               in the RPA industry. Most of these will be for developers.
-...               The demand for software robot developers is growing. Many companies
-...               will employ teams of software robot developers to build and operate
-...               their automated workforce. Other organizations hire external
-...               developers to offer them automation with a 'robotics-as-a-service' model.
+${TEXT_SAMPLE}=    A software robot developer creates digital agents for
+...               robotic process automation (RPA), test automation,
+...               application monitoring, or some other use. Tens of thousands
+...               of new jobs are predicted to be created in the RPA industry.
+...               Most of these will be for developers. The demand for software
+...               robot developers is growing. Many companies will employ teams
+...               of software robot developers to build and operate their
+...               automated workforce. Other organizations hire external
+...               developers to offer them automation with a
+...               'robotics-as-a-service' model.
 
 *** Tasks ***
 Analyze invoice with AWS Textract and find tables from the response
